@@ -1,0 +1,19 @@
+name: Swift
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: maxep/spm-lcov-action@0.3.1
+    - name: Build
+      run: swift build -v
+    - name: Run tests
+      run: swift test -v
