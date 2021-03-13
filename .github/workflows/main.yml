@@ -1,2 +1,0 @@
-name: Swift Coverage Report
-  uses: maxep/spm-lcov-action@0.3.1
